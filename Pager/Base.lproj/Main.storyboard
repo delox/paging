@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qaV-fG-GUY">
+                                <rect key="frame" x="0.0" y="70" width="375" height="547"/>
+                                <connections>
+                                    <segue destination="5FV-kn-Qvv" kind="embed" id="cer-hL-0tg"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ecT-ic-g5s">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <color key="backgroundColor" red="0.72336632013320923" green="0.0086219559041738579" blue="0.66969515346087138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="g8D-6E-WSi"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IjK-Pg-PIS">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <state key="normal" title="TRIGGER NEXT"/>
+                                <connections>
+                                    <action selector="nextTriggered:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qcm-nM-QkP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qaV-fG-GUY" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-50" id="4VV-gu-EBx"/>
+                            <constraint firstItem="ecT-ic-g5s" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6pO-0e-Ic7"/>
+                            <constraint firstItem="IjK-Pg-PIS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8RM-iF-Rk8"/>
+                            <constraint firstItem="IjK-Pg-PIS" firstAttribute="top" secondItem="qaV-fG-GUY" secondAttribute="bottom" id="BNh-PB-h1u"/>
+                            <constraint firstItem="qaV-fG-GUY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EJH-0n-egO"/>
+                            <constraint firstItem="IjK-Pg-PIS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Fll-Em-ZOd"/>
+                            <constraint firstItem="ecT-ic-g5s" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Gug-xC-vRb"/>
+                            <constraint firstItem="qaV-fG-GUY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LuB-qF-46b"/>
+                            <constraint firstItem="ecT-ic-g5s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rgU-6T-ZT5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IjK-Pg-PIS" secondAttribute="trailing" id="z6f-1L-u6C"/>
+                            <constraint firstItem="qaV-fG-GUY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="z7Q-5d-gvk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="nextButton" destination="IjK-Pg-PIS" id="Jhp-cE-3eE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-719.20000000000005" y="-170.46476761619192"/>
+        </scene>
+        <!--YellowVC-->
+        <scene sceneID="Kfo-0l-gai">
+            <objects>
+                <viewController storyboardIdentifier="yellowVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y2D-oI-PkV" customClass="yellowVC" customModule="Pager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LBH-6g-93L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.98035689489019073" blue="0.14092911504461259" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="vUC-vM-Omk"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WNk-BX-uWp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-686" y="592"/>
+        </scene>
+        <!--BlueVC-->
+        <scene sceneID="swD-2P-cYB">
+            <objects>
+                <viewController storyboardIdentifier="blueVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Sa5-yK-cb0" customClass="blueVC" customModule="Pager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DRB-eX-XuT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.092179649556222265" green="0.23892935695356554" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="B3U-Oy-9ry"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LQH-TX-TJC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="97" y="593"/>
+        </scene>
+        <!--RedVC-->
+        <scene sceneID="irJ-pY-4Dg">
+            <objects>
+                <viewController storyboardIdentifier="redVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="f5T-Lf-ZvB" customClass="redVC" customModule="Pager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HU8-3l-F8V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.06950727541403523" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="xy7-Cb-4Is"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5UG-9U-Nwh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="902" y="594"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="kGI-nl-MqY">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="5FV-kn-Qvv" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YFu-Ye-Oy4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="265" y="-165"/>
+        </scene>
+    </scenes>
+</document>
